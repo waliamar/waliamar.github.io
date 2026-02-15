@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9E0R3DSRN1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-9E0R3DSRN1');
+	</script>
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>SHASHWAT'S PORTFOLIO</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">  
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/vendor.css">   
+   
+   <style>
+
+	#about {
+	background-color: #ecebea;
+	padding: 40px 0; /* Adjust padding as needed */
+	}
+
+	body {
+    font-family: 'Poppins', sans-serif; /* Default font set to Poppins */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+	}
+
+	/* Main container for text content */
+	.container {
+		width: 90%; /* Set width to 90% of the viewport */
+		max-width: 500px; /* Maximum width of the container */
+		margin: 120px auto;
+		background-color: #fff;
+		padding: 0 20px 20px;
+		border-radius: 6px;
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.075);
+		-webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.075);
+		-moz-box-shadow: 0 2px 5px rgba(0,0,0,0.075);
+		text-align: center;
+	}
+
+	/* Avatar flip effect */
+	.container:hover .avatar-flip {
+		transform: rotateY(180deg);
+		-webkit-transform: rotateY(180deg);
+	}
+
+	.container:hover .avatar-flip img:first-child {
+		opacity: 0;
+	}
+
+	.container:hover .avatar-flip img:last-child {
+		opacity: 1;
+	}
+
+	/* Avatar flip styling */
+	.avatar-flip {
+		border-radius: 100px;
+		overflow: hidden;
+		height: 150px;
+		width: 150px;
+		position: relative;
+		margin: auto;
+		top: -60px;
+		transition: all 0.3s ease-in-out;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		box-shadow: 0 0 0 13px #f0f0f0;
+		-webkit-box-shadow: 0 0 0 13px #f0f0f0;
+		-moz-box-shadow: 0 0 0 13px #f0f0f0;
+	}
+
+	.avatar-flip img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		border-radius: 100px;
+		transition: all 0.3s ease-in-out;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+	}
+
+	.avatar-flip img:first-child {
+		z-index: 1;
+	}
+
+	.avatar-flip img:last-child {
+		z-index: 0;
+		transform: rotateY(180deg);
+		-webkit-transform: rotateY(180deg);
+		opacity: 0;
+	}
+
+	/* Heading styling */
+	h2 {
+		font-size: 32px;
+		font-weight: 600;
+		margin-bottom: 15px;
+		color: #333;
+	}
+
+	/* Subheading styling */
+	h4 {
+		font-size: 13px;
+		color: #00baff;
+		letter-spacing: 1px;
+		margin-bottom: 25px;
+	}
+
+	/* Paragraph styling */
+	p {
+		font-size: 16px;
+		line-height: 26px;
+		margin-bottom: 20px;
+		color: #666;
+	}
+
+	/* Responsive media query for small screens */
+	@media (max-width: 768px) {
+		.container {
+			width: 95%; /* Adjust width for small screens */
+			margin: 60px auto;
+			padding: 0 10px 10px; /* Reduce padding */
+		}
+
+		h2 {
+			font-size: 28px; /* Adjust heading size */
+		}
+
+		p {
+			font-size: 14px; /* Adjust paragraph font size */
+			line-height: 22px; /* Adjust line height */
+		}
+
+		.avatar-flip {
+			height: 120px;
+			width: 120px; /* Adjust avatar size */
+			top: -50px;
+			box-shadow: 0 0 0 10px #f0f0f0; /* Adjust shadow size */
+			-webkit-box-shadow: 0 0 0 10px #f0f0f0;
+			-moz-box-shadow: 0 0 0 10px #f0f0f0;
+		}
+	}
+
+
+  </style>
+
+   <!-- script
+   ================================================== -->   
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+
+<body id="top">
+
+	<!-- header 
+   ================================================== -->
+   <header>   	
+   	<div class="row">
+
+   		<div class="top-bar">
+   			<a class="menu-toggle" href="#"><span>Menu</span></a>
+
+	   		<div class="logo">
+				<h5>SHASHWAT'S PORTFOLIO</h5>
+			</div>
+						  
+
+		   	<nav id="main-nav-wrap">
+					<ul class="main-navigation">
+						<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
+						<li><a class="smoothscroll"  href="#about" title="">About</a></li>
+						<li><a class="smoothscroll"  href="#portfolio" title="">My Projects</a></li>
+						<li><a class="smoothscroll"  href="#DOC" title="">Certificates</a></li>
+										
+						<li><a class="smoothscroll"  href="#contact" title="">Contact</a></li>	
+							
+					</ul>
+				</nav>    		
+   		</div> <!-- /top-bar --> 
+   		
+   	</div> <!-- /row --> 		
+   </header> <!-- /header -->
+
+	<!-- intro section
+   ================================================== -->
+   <section id="intro">   
+
+   	<div class="intro-overlay"></div>	
+
+   	<div class="intro-content">
+   		<div class="row">
+
+   			<div class="col-twelve">
+
+	   			<h5>Hello, World.</h5>
+	   			<h1>I'm Shashwat.</h1>
+
+	   			<p class="intro-position">
+	   				<span>ROBOTICS AND AUTOMATION ENTHUSIAST</span>
+	   				<span>ROS2 and Embedded Developer</span> 
+	   			</p>
+
+	   			<a class="button stroke smoothscroll" href="#about" title="">MORE ABOUT ME</a>
+				<a class="button stroke smoothscroll" href="#portfolio" title="">MY PROJECTS</a>
+				<!-- <a class="button stroke smoothscroll" href="#DOC" title="">CERTIFICATES</a> -->
+
+	   		</div>  
+   			
+   		</div>   		 		
+   	</div> <!-- /intro-content --> 
+
+   	<ul class="intro-social">        
+        
+		<!-- <li><a href="https://www.behance.net/shashwatma" target="_blank"><i class="fa fa-behance"></i></a></li> -->
+		<li><a href="https://www.linkedin.com/in/shashwatma/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+		<li><a href="https://github.com/Shashwat1524" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+      </ul> <!-- /intro-social -->      	
+
+   </section> <!-- /intro -->
+
+
+   <!-- about section
+   ================================================== -->
+   <section id="about">  
+			<div class="row section-intro">
+			<div class="col-twelve">
+		
+				<h5>About</h5>
+				<h1>Let me introduce myself.</h1>
+		
+				<!-- <div class="intro-container">
+					<img class="profile-pic" src="images/profile.jpeg" alt="Profile Picture">
+					<div class="intro-text">
+						<p>
+							I’m a Robotics and Automation enthusiast with a knack for blending hardware and software, diving into everything from the Robotics Operating System and Embedded systems to Electric Vehicle Tech. I'm all about pushing the limits of automation and super excited about the future of robotics and autonomous vehicles.
+							When I'm not geeking out over tech, you’ll find me flexing my creative muscles as a freelance graphic designer, tackling all sorts of cool projects. Off the screen, I’m either shooting hoops on the basketball court, cheering on my favorite cricket teams, or hitting the gym to stay fit.
+						</p>
+					</div>
+				</div> -->
+
+				<div class="container">
+					<div class="avatar-flip">
+					  <img src="images/profile.jpeg" height="150" width="150">
+					  <img src="images/profile.jpeg" height="150" width="150">
+					</div>
+					<h2>Shashwat M.A</h2>
+					<p>
+						I’m a Robotics and Automation enthusiast with a knack for blending hardware and software, diving into everything from the Robotics Operating System and Embedded systems to Electric Vehicle Tech. I'm all about pushing the limits of automation and super excited about the future of robotics and autonomous vehicles.
+					</p>
+					<p>
+						When I'm not geeking out over tech, you’ll find me flexing my creative muscles as a freelance graphic designer, tackling all sorts of cool projects. Off the screen, I’m either shooting hoops on the basketball court, cheering on my favorite cricket teams, or hitting the gym to stay fit.
+					</p>
+				</div>
+			</div>   
+			</div>    
+
+
+   	<div class="row button-section">
+   		<div class="col-twelve">
+			<!-- <img src="assets/Shashwat_Mudugur_Resume.pdf" alt="Shashwat Resume"> -->
+			<a href="assets/Shashwat_Resume.pdf" title="Shashwat_Resume" class="button button-primary" download>Download Resume</a>
+
+   		</div>   		
+   	</div>
+
+   </section> <!-- /process-->  
+   
+   
+	<!-- Portfolio Section
+   ================================================== -->
+	<section id="portfolio">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>MY PROJECTS</h5>
+   			<h1>Check Out Some of My Work!</h1>
+			<h4>Click on the project tabs below to view detailed descriptions and access the corresponding GitHub repositories. All of the projects are my individual projects</h4>
+
+   	   		</div>   		
+   	</div> <!-- /section-intro--> 
+
+   	<div class="row portfolio-content">
+
+   		<div class="col-twelve">
+
+   			<!-- portfolio-wrapper -->
+	         <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
+
+				<div class="bgrid folio-item">
+					<div class="item-wrap">
+						<img src="images/portfolio/hmi_robot.gif" alt="Liberty" style="width: 100%;">
+					   <a href="#modal-14" class="overlay">	                  	           
+						  <div class="folio-item-table">
+							  <div class="folio-item-cell">
+										 <h3 class="folio-title">Gesture Controlled Robotic Arm </h3>	     					    
+										   <span class="folio-types">
+											 STM32, FreeRTOS, MediaPipe
+										 </span>
+									 </div>	                      	
+						  </div>                    
+					   </a>
+					</div>	               
+					 </div> <!-- /folio-item -->
+
+	         	<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/traffic_sign_class.jpg" alt="Liberty" style="width: 100%;">
+	                  <a href="#modal-10" class="overlay">	                  	           
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+		     					       <h3 class="folio-title">Traffic Sign Classification Using CSP </h3>	     					    
+		     					    	 <span class="folio-types">
+											PyTorch, Python, Open CV , Matplotlib
+		     					       </span>
+		     					   </div>	                      	
+	                     </div>                    
+	                  </a>
+	               </div>	               
+	        		</div> <!-- /folio-item -->
+				
+				<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/ttbot4_astar.gif" alt="Liberty" style="width: 100%;">
+	                  <a href="#modal-11" class="overlay">	                  	           
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+		     					       <h3 class="folio-title">A* Path Planning with PID Control on TurtleBot4</h3>	     					    
+		     					    	 <span class="folio-types">
+		     					       	  PYTHON, ROS2, RVIZ, GAZEBO
+		     					       </span>
+		     					   </div>	                      	
+	                     </div>                    
+	                  </a>
+	               </div>	               
+	        		</div> <!-- /folio-item -->
+				
+				<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/rrt.gif" alt="Liberty" style="width: 100%;">
+	                  <a href="#modal-12" class="overlay">	                  	           
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+		     					       <h3 class="folio-title">RRT* Path Planning and Following for Obstacle Avoidance on TurtleBot3 Simulation</h3>	     					    
+		     					    	 <span class="folio-types">
+											PYTHON, ROS2, RVIZ, GAZEBO
+		     					       </span>
+		     					   </div>	                      	
+	                     </div>                    
+	                  </a>
+	               </div>	               
+	        		</div> <!-- /folio-item -->
+				
+				<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/ball_tracking.gif" alt="Liberty" style="width: 100%;">
+	                  <a href="#modal-13" class="overlay">	                  	           
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+		     					       <h3 class="folio-title">Ball-Following Turtlebot3 using Kalman Filter</h3>	     					    
+		     					    	 <span class="folio-types">
+											PYTHON, ROS2, RVIZ, GAZEBO
+		     					       </span>
+		     					   </div>	                      	
+	                     </div>                    
+	                  </a>
+	               </div>	               
+	        		</div> <!-- /folio-item -->
+				
+				<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/motodash.gif" alt="Liberty" style="width: 100%;">
+	                  <a href="#modal-01" class="overlay">	                  	           
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+		     					       <h3 class="folio-title">E-Motorbike Telemetry Dashboard System</h3>	     					    
+		     					    	 <span class="folio-types">
+		     					       	  PYTHON, ESP32, Raspberry Pi
+		     					       </span>
+		     					   </div>	                      	
+	                     </div>                    
+	                  </a>
+	               </div>	               
+	        		</div> <!-- /folio-item -->
+				
+					<div class="bgrid folio-item">
+						<div class="item-wrap">
+							<img src="images/portfolio/STM32.jpeg" alt="Shutterbug" >
+							<a href="#modal-02" class="overlay">              		                  
+							  <div class="folio-item-table">
+								  <div class="folio-item-cell">
+									  <h3 class="folio-title">AQUA-CULTURE COOLER USING DS18B20 and STM32</h3>	     					    
+											  <span class="folio-types">
+												 DS18B20,STM32,FAN
+											</span>		     		
+										 </div> 	                      	
+							  </div>                    
+						   </a>
+						</div>
+						 </div> <!-- /folio-item -->
+
+
+	            
+
+	            <div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/QUADCOPTER.gif" alt="Beetle" style="width: 100%;">
+	                  <a href="#modal-04" class="overlay">                  	                 
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">QUADCOPTER DRONE</h3>	     					    
+		     					    	<span class="folio-types">
+		     					       	  Arduino, MPU-6050, PID, Electronic Speed Control
+		     					      </span>		     		
+		     					   </div>  	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->     
+
+	        	
+
+	            
+
+				<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/aut_drone.jpg" alt="Autonomous Drone">
+	                  <a href="#modal-07" class="overlay">
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">AUTONOMOUS DRONE BASED ON MOCAP</h3>	     					    
+		     					    	<span class="folio-types">
+											ESP-IDF, MICRO-ROS, MOCAP
+		     					      </span>		     		
+		     					   </div>	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->   
+
+				<div class="bgrid folio-item">
+						<div class="item-wrap">
+							<img src="images/PPC_Hardware_Setup.png" alt="PPC">
+						   <a href="#modal-08" class="overlay">
+							  <div class="folio-item-table">
+								  <div class="folio-item-cell">
+									  <h3 class="folio-title">PRESCRIBED PERFORMANCE CONTROL USING DC MOTOR</h3>	     					    
+											  <span class="folio-types">
+												 CONTROL SYSTEMS, TEENSY
+											</span>		     		
+										 </div>	                      	
+							  </div>                    
+						   </a>
+						</div>
+				</div> <!-- /folio-item -->  
+				<div class="bgrid folio-item">
+					<div class="item-wrap">
+						<img src="images/payload_autonomous.png" alt="PPC">
+					   <a href="#modal-09" class="overlay">
+						  <div class="folio-item-table">
+							  <div class="folio-item-cell">
+								  <h3 class="folio-title">PAYLOAD SYSTEM FOR AUTONOMOUS DRONE</h3>	     					    
+										  <span class="folio-types">
+											 CAD(SolidWorks), PRODUCT DESIGN
+										</span>		     		
+									 </div>	                      	
+						  </div>                    
+					   </a>
+					</div>
+			</div> <!-- /folio-item --> 
+
+			<div class="bgrid folio-item">
+				<div class="item-wrap">
+					<img src="images/portfolio/smartwatch.jpeg"alt="Clouds" style="width: 100%;">
+				   <a href="#modal-03" class="overlay">             		                  
+					  <div class="folio-item-table">
+						  <div class="folio-item-cell">
+							  <h3 class="folio-title">IIOT WATCH THAT MEASURES PULSE</h3>	     					    
+									  <span class="folio-types">
+										   ESP32, SEN-1157 Pulse Sensor,SSD1306 OLED Display
+										   
+										   
+									</span>		     		
+								 </div> 	                      	
+					  </div>                    
+				   </a>
+				</div>
+				 </div> <!-- /folio-item -->
+
+			<div class="bgrid folio-item">
+				<div class="item-wrap">
+					<img src="images/ros_nav2.jpeg" alt="Lighthouse">
+				   <a href="#modal-05" class="overlay">             		                  
+					  <div class="folio-item-table">
+						  <div class="folio-item-cell">
+							  <h3 class="folio-title">CUSTOM ROBOT NAVIGATION WITH NAV2</h3>	     					    
+									  <span class="folio-types">
+										   ROS2, GAZEBO, RVIZ, NAV2
+									</span>		     		
+								 </div> 	                      	
+					  </div>                    
+				   </a>
+				</div>
+				 </div> <!-- /folio-item -->
+				
+				 <div class="bgrid folio-item">
+					<div class="item-wrap">
+						<img src="images/turtlebot_t_r.png" alt="Salad">
+					   <a href="#modal-06" class="overlay">
+						  <div class="folio-item-table">
+							  <div class="folio-item-cell">
+								  <h3 class="folio-title">TUTRTLEBOT3 TRAJECTORY RECORDER AND VISUALIZER</h3>	     					    
+										  <span class="folio-types">
+											 ROS2, GAZEBO, RVIZ
+										</span>		     		
+									 </div>	                      	
+						  </div>                    
+					   </a>
+					</div>
+					 </div> <!-- /folio-item -->  
+
+	            <!-- modal popups - begin
+	            ============================================================= -->
+	            <div id="modal-01" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/motodash.gif" alt="" style="width: 100%;">
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>E-Motorbike Telemetry Dashboard System/h4>		      
+					      <p>- Developed an interactive dashboard using Python and Raspberry Pi 3 to monitor and analyze motor controller data via CAN (Controller Area Network) communication.</p>
+						  <p>- Collected key motor parameters such as RPM and current supply from the motor controller over CAN.</p>
+						  <p>- Implemented C code on ESP32 to act as a CAN receiver, filtering messages based on specific ID fields and forwarding relevant data via UART to the Raspberry Pi.</p>
+						  <p>- Designed a graphical dashboard using Pygame on the Raspberry Pi, providing a real-time visual interface for motor performance monitoring.</p>
+						  <p>- Integrated a data logging system and saved  the motor rpm and current data in CSV format for analysis and diagnostics.</p>
+
+					      <div class="categories"></div>			               
+					   </div>
+
+					<div class="link-box">
+						<a href="https://github.com/Shashwat1524/Dashboard-Design-Based-on-Python-and-CAN-Communication" target="_blank" class="popup-modal-github"><i class="fa fa-github"></i> GitHub</a>
+						<a href="#" class="popup-modal-dismiss">Close</a>
+					</div>		      
+
+				   </div> <!-- /modal-01 -->
+
+				   <div id="modal-02" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/FAN.gif" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Smart Temperature Control for Hydroponic using DS18B20 temperature sensor and STM32</h4>		      
+					      <p>- Integrated an STM32 microcontroller, a DS18B20 temperature sensor via the 1-Wire protocol, and a relay-controlled fan to regulate temperature in a hydroponics system. </p>
+						  <p>- Developed a PID-based control system to dynamically adjust the fan speed for maintaining optimal conditions. </p>
+						  <p>- Implemented FreeRTOS with one task dedicated to reading temperature data and another for executing the PID control, ensuring real-time responsiveness and efficient temperature regulation.</p>
+					      <div class="categories">DS18B20,STM32,FAN</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            
+				 <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> <!-- /modal-02 -->
+
+				   <div id="modal-03" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/SMARTWATCHGIF.gif" alt="" style="width: 100%;">
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>IIOT WATCH THAT MEASURES PULSE</h4>		      
+					      <p>- Developed a smartwatch using ESP32 that integrates a SEN-1157 Pulse Sensor for real-time heart rate monitoring. </p>
+						  <p>- Displayed heartbeat data on an SSD1306 OLED display using I2C communication.</p>
+						  <p>-  Implemented WiFi connectivity to fetch and display the current time and related information, ensuring seamless real-time updates. </p>
+
+					      <div class="categories">ESP32, SEN-1157 Pulse Sensor,SSD1306 OLED Display</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            
+				 <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> <!-- /modal-03 -->
+
+				   <div id="modal-04" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/QUADCOPTER.gif" alt="" style="width: 100%;">
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>PID-Based Flight Controller for Quadcopter </h4>		      
+					      <p>- Developed a flight controller for a quadcopter by integrating an MPU-6050 IMU sensor with an Arduino. </p>
+						  <p>- Acquired gyroscope and accelerometer data from the MPU-6050 and processed it to compute roll, pitch, and yaw angles. </p>
+						  <p>- Implemented a complementary filter to fuse accelerometer and gyroscope data, compensating for gyroscope drift and improving attitude estimation. </p>
+						  <p>- Designed a PID-based flight controller to stabilize the quadcopter by adjusting motor speeds. </p>
+						  <p>- Generated PWM signals to control ESCs, which regulated the BLDC motors for stable flight dynamics. </p>
+
+					      <div class="categories">Arduino, MPU-6050, PID, Electronic Speed Control</div>			               
+					   </div>
+
+			         <div class="link-box">
+			        
+				 <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> <!-- /modal-04 -->
+
+				   <div id="modal-05" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/ros_nav2.jpeg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>CUSTOM ROBOT NAVIGATION WITH NAV2</h4>		      
+					      <p>This project demonstrates custom robot navigation using ROS2 Humble and NAV2, incorporating SLAM for mapping and path planning. The robot utilizes Lidar sensor technology for accurate environmental perception.</p>
+
+					      <div class="categories">ROS2, GAZEBO, RVIZ, NAV2</div>			               
+					   </div>
+
+					<div class="link-box">
+						<a href="https://github.com/Shashwat1524/Custom-Robot-navigation-using-NAV2-and-ROS2-Humble" target="_blank" class="popup-modal-github"> <i class="fa fa-github"></i> GitHub</a>
+						<a href="#" class="popup-modal-dismiss">Close</a>
+					</div>	      
+
+				   </div> <!-- /modal-05 -->
+
+				   <div id="modal-06" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/trajectory.png" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>TurtleBot3 Trajectory Recorder and Visualizer</h4>		      
+					      <p>This Project records the trajectory of a TurtleBot3 robot as it moves through its environment and visualize it in ROS2 Humble.</p>
+
+					      <div class="categories">ROS2, GAZEBO, RVIZ</div>			               
+					   </div>
+
+					<div class="link-box">
+						<a href="https://github.com/Shashwat1524/TurtleBot3-Trajectory-Recorder-and-Visualizer" target="_blank" class="popup-modal-github"><i class="fa fa-github"></i> GitHub</a>
+						<a href="#" class="popup-modal-dismiss">Close</a>
+					</div>	      
+
+				   </div> <!-- /modal-06 -->
+				   <div id="modal-07" class="popup-modal slider mfp-hide">	
+
+					<div class="media">
+						<img src="images/aut_drone.jpg" alt="" />
+					</div>      	
+
+				  <div class="description-box">
+					 <h4>AUTONOMOUS DRONE BASED ON MOCAP</h4>		      
+					 <p> Designed and developed a drone flight controller using ESP32 integrated with Micro-ROS for real-time interfacing with a Motion Capture System, programmed in C and C++ using ESP-IDF.</p>
+					 <p>- Implemented an RTOS-based scheduler to acquire Motion Capture System data and activate fail-safe mechanisms during communication loss. </p>
+					 <p>- Integrated an MPU-6050 IMU (via I2C) and Lidar (via UART) to enable autonomous safe landing under fail-safe conditions.</p>
+
+					 <div class="categories">ESP-IDF, MICRO-ROS, MOCAP</div>			               
+				  </div>
+				
+
+			   <div class="link-box">
+				   <a href="https://github.com/Shashwat1524/ESP_MOCAP_Drone_Flight_Controller" target="_blank" class="popup-modal-github"><i class="fa fa-github"></i> GitHub</a>
+				   <a href="#" class="popup-modal-dismiss">Close</a>
+			   </div>	      
+
+			  </div> <!-- /modal-07 -->
+			  <div id="modal-08" class="popup-modal slider mfp-hide">	
+
+				<div class="media">
+					<img src="images/PPC_Hardware_Setup.png" alt="" />
+				</div>      	
+
+			  <div class="description-box">
+				 <h4>PRESCRIBED PERFORMANCE CONTROL USING DC MOTOR</h4>		      
+				 <p>- Developed the embedded components for a Prescribed Performance Control (PPC) algorithm to regulate DC motor speed on a Teensy microcontroller, achieving 30% better stability compared to conventional PID control. </p>
+				 <p>- Implemented the PPC formula in code and processed the control output into pulse signals to drive the DC motor’s ESC, ensuring precise speed regulation.</p>
+				 
+
+				 <div class="categories">CONTROL SYSTEMS, TEENSY</div>			               
+			  </div>
+
+		   <div class="link-box">
+			   <a href="https://github.com/Shashwat1524/Prescribed-Performance-Control-vs-PID-Control-of-DC-Motor" target="_blank" class="popup-modal-github"><i class="fa fa-github"></i> GitHub</a>
+			   <a href="#" class="popup-modal-dismiss">Close</a>
+		   </div>	      
+
+		  </div> <!-- /modal-08 -->
+		  <div id="modal-09" class="popup-modal slider mfp-hide">	
+
+			<div class="media">
+				<img src="images/payload_autonomous.png" alt="" />
+			</div>      	
+
+		  <div class="description-box">
+			 <h4>PAYLOAD SYSTEM FOR AUTONOMOUS DRONE</h4>		      
+			 <p>- Redesigned the payload system for an autonomous drone using CAD and 3D printing, integrating a Raspberry Pi, IMU, and battery for optimized weight distribution and stability.</p> 
+			 <p>- Fabricated the payload structure using carbon fiber for durability and lightweight performance. </p>
+			 <p>- Designed and 3D-printed the casing for electronic components using SolidWorks and manufactured it with a Creality 3D printer. </p>
+			 <p>- Assembled the electronic circuitry by soldering components onto a breadboard and incorporating switches to enable controlled power distribution and system isolation for safety and debugging.</p>
+
+			 <div class="categories">CAD, PRODUCT DESIGN, 3D Printing, Circuit Design</div>			               
+		  </div>
+
+	   <div class="link-box">
+		   <a href="#" class="popup-modal-dismiss">Close</a>
+	   </div>	      
+
+	  </div> <!-- /modal-09 -->
+
+	  <div id="modal-10" class="popup-modal slider mfp-hide">	
+
+		<div class="media">
+			<img src="images/portfolio/traffic_model.png" alt="" />
+		</div>      	
+
+	  <div class="description-box">
+		 <h4>Traffic Sign Classification Using Cross Stage Partials(CSP)</h4>		      
+		 <p>- Developed a traffic sign classification model utilizing CSPNet, which partitions the feature map to reduce computational load while maintaining efficiency. This approach improved gradient flow and computational efficiency by 20%.</p>
+		 <p>- Implemented the Mish activation function, which enhances gradient propagation compared to ReLU, leading to better feature representation and smoother optimization.</p>
+		 <p>- Applied data augmentation techniques to improve generalization and mitigate overfitting—common challenges in traffic sign classification.</p>
+		 <p>- Achieved 87% accuracy on the German Traffic Sign Dataset. </p>
+
+		 <div class="categories">PyTorch, Python, Open CV , Matplotlib</div>			               
+	  </div>
+
+	  <div class="link-box">
+			<a href="https://github.com/Shashwat1524/Traffic_Sign_Classification_Cross_Stage_Partial_Network" target="_blank" class="popup-modal-github"><i class="fa fa-github"></i> GitHub</a>
+		   <a href="#" class="popup-modal-dismiss">Close</a>
+	   </div>	      
+
+	  </div> <!-- /modal-10 -->
+	  
+	  <!-- /modal-11 -start -->
+	  <div id="modal-11" class="popup-modal slider mfp-hide">	
+
+		<div class="media">
+			<img src="images/portfolio/ttbot4_astar.gif" alt="" />
+		</div>      	
+
+	  <div class="description-box">
+		 <h4>A* Path Planning with PID Control on TurtleBot4</h4>		      
+		 <p>- Developed a path-planning system that loads and processes map data to construct graph structures for optimal path calculation using the A search algorithm*, a heuristic-driven approach that balances cost and efficiency.</p>
+			<p>- Implemented A search*, which combines Dijkstra’s algorithm (guaranteeing shortest paths) with a heuristic (Euclidean distance) to prioritize exploration, improving computational speed.</p>
+				<p>- Designed a PID controller to ensure accurate path following by dynamically adjusting the robot's velocity and orientation.</p>
+					<p>- Validated the approach on TurtleBot3 simulations and a physical TurtleBot4, demonstrating reliable real-world performance.</p>
+
+		 <div class="categories">Python, ROS2, Rviz, Gazebo, Matplotlib</div>			               
+	  </div>
+
+	  <div class="link-box">
+			<a href="https://github.com/Shashwat1524/A-Star-Path-Planning-for-Obstacle-Avoidance-on-TurtleBot3" target="_blank" class="popup-modal-github"><i class="fa fa-github"></i> GitHub</a>
+		   <a href="#" class="popup-modal-dismiss">Close</a>
+	   </div>	      
+
+	  </div> <!-- /modal-11 -->
+
+	  <!-- /modal-12 -start -->
+	  <div id="modal-12" class="popup-modal slider mfp-hide">	
+
+		<div class="media">
+			<img src="images/portfolio/rrt.gif" alt="" />
+		</div>      	
+
+	  <div class="description-box">
+		 <h4>RRT* Path Planning and Following for Obstacle Avoidance on TurtleBot3 Simulation</h4>		      
+		 <p>- Implemented the RRT* (Rapidly-exploring Random Tree) algorithm for path planning, leveraging a KD-Tree for efficient nearest-neighbor searches and graph construction. </p>
+		 <p>- RRT* works by randomly sampling points in the environment, extending a tree structure toward them, and iteratively refining paths by rewiring connections to minimize cost, ensuring asymptotic optimality. </p>
+		 <p>- Used KD-Tree ( library implementation), a space-partitioning data structure, to efficiently store and retrieve nearest nodes, significantly improving the performance of path expansion. </p>
+		 <p>- Designed a PID controller to track the generated path accurately by dynamically adjusting the robot's motion. </p>
+		 <p>- Validated the approach through simulations in RViz and Gazebo, ensuring effective real-world applicability. </p>
+
+		 <div class="categories">Python, ROS2, Rviz, Gazebo, Matplotlib</div>			               
+	  </div>
+
+	  <div class="link-box">
+			<a href="https://github.com/Shashwat1524/RRT-Star-Path-Planning-for-Obstacle-Avoidance-on-TurtleBot3" target="_blank" class="popup-modal-github"><i class="fa fa-github"></i> GitHub</a>
+		   <a href="#" class="popup-modal-dismiss">Close</a>
+	   </div>	      
+
+	  </div> <!-- /modal-12 -->
+
+	  <!-- /modal-13 -start -->
+	  <div id="modal-13" class="popup-modal slider mfp-hide">	
+
+		<div class="media">
+			<img src="images/portfolio/ball_tracking.gif" alt="" />
+		</div>      	
+
+	  <div class="description-box">
+		 <h4>Ball-Following Turtlebot using Kalman Filter</h4>		      
+		 <p>- Developed a ball-following system for TurtleBot3 using a Kalman Filter to enhance tracking accuracy and predict future ball positions based on motion dynamics.</p>
+			<p>- Implemented ball detection using OpenCV, identifying a red ball and estimating its distance based on its perceived size—larger size indicating closer proximity.</p>
+				<p>- Utilized the Kalman Filter, which recursively estimates the ball’s position  based on its current velocity and motion model and by combining noisy sensor data with these motion predictions it helps in improving tracking stability and thereby reducing errors.  </p>
+
+		 <div class="categories">Python, ROS2, Rviz, Gazebo</div>			               
+	  </div>
+
+	  <div class="link-box">
+			<a href="https://github.com/Shashwat1524/Ball-Following-Robot-using-Kalman-Filter" target="_blank" class="popup-modal-github"><i class="fa fa-github"></i> GitHub</a>
+		   <a href="#" class="popup-modal-dismiss">Close</a>
+	   </div>	      
+
+	  </div> <!-- /modal-13 -->
+
+	  	  <!-- /modal-14-start -->
+			<div id="modal-14" class="popup-modal slider mfp-hide">	
+
+				<div class="media">
+					<img src="images/portfolio/hmi_robot.gif" alt="" />
+				</div>      	
+		
+			  <div class="description-box">
+				 <h4>Gesture Controlled Robotic Arm</h4>		      
+				<p> This system enables real-time control of a robotic arm using hand gestures detected via MediaPipe. The gestures are processed in Python and translated into control commands, which are transmitted over UART to an STM32 microcontroller.
+
+					The STM32 is programmed using CMSIS and HAL drivers, with hardware timers configured in PWM mode to control servo motors. Each timer channel generates pulse widths (typically 0.5–2.5 ms within a 20 ms period) corresponding to specific joint angles.
+					
+					The microcontroller continuously reads UART data, decodes the incoming gesture commands, and updates PWM outputs accordingly. </p>
+					<p>All these taks are controlled using FreeRTOS to ensure all the tasks are performed in a determinisitic manner.</p>
+					
+					<p>This project demonstrates the integration of vision-based HMI with embedded motor control using timer-driven PWM and efficient serial communication.</p>
+				 <div class="categories">STM32, FreeRTOS, MediaPipe</div>			               
+			  </div>
+		
+			  <div class="link-box">
+					<a href="https://github.com/Shashwat1524/Gesture-Controlled-Robotic-Arm" target="_blank" class="popup-modal-github"><i class="fa fa-github"></i> GitHub</a>
+				   <a href="#" class="popup-modal-dismiss">Close</a>
+			   </div>	      
+		
+			  </div> <!-- /modal-14 -->
+
+
+				   <!-- modal popups - end
+	            ============================================================= -->
+
+	         </div> <!-- /portfolio-wrapper --> 
+
+   		</div>  <!-- /twelve -->   
+
+   	</div> <!-- /portfolio-content --> 
+		
+	</section> <!-- /portfolio --> 
+	
+	 <!-- resume Section
+   ================================================== -->
+   <section id="DOC" class="grey-section">
+
+	<div class="row section-intro">
+	   <div class="col-twelve"> 
+	</p>
+		   <h5>CERTIFICATES</h5>
+		   <h1>Here are My Certificates and Recognitions</h1>
+		   
+			<img src="assets/moto.png" alt="MOTOMANIPAL CERTIFICATE">
+			<a href="assets/Shashwat_M.A_MotoManipal_Certificate.pdf" title="Shashwat_M.A_MotoManipal_Certificate" class="button button-primary" download>MOTOMANIPAL CERTIFICATE</a>
+		 	   
+		   <img src="assets/ICHTR.png" alt="CONFERENCE CERTIFICATE">
+		   <a href="assets/Shashwat M.A._ICHTR_CERTIFICATE.pdf" title="Shashwat M.A._ICHTR_CERTIFICATE" class="button button-primary" download>ICHTR CONFERENCE CERTIFICATE</a>
+
+		   <img src="assets/ola.png" alt="OLA CERTIFICATE">
+			<a href="assets/Shashwat_MA_OLA_Internship_Certificate.pdf" title="Shashwat_MA_OLA_Internship_Certificate" class="button button-primary" download>OLA ELECTRIC INTERNSHIP CERTIFICATE</a>
+		   
+		   <img src="assets/workshop.png" alt="WORKSHOP CERTIFICATE">
+		   <a href="assets/Shashwat_M.A_STM_AI_Certificate.pdf" title="Shashwat_M.A_STM_AI_Certificate" class="button button-primary" download>STM AI WORKSHOP CERTIFICATE</a>
+
+		   <img src="assets/ROTARACT.png" alt="ROTARACT CERTIFICATE">
+		   <a href="assets/Shashwat_Rotaract_Certificate.pdf" title="Shashwat_Rotaract_Certificate.pdf" class="button button-primary" download>ROTARACT CERTIFICATE</a>
+
+		   <img src="assets/BLOOD.png" alt="BLOOD DONATION CAMP CERTIFICATE">
+		   <a href="assets/Shashwat_Blood_Donation_Certificate.pdf" title="Shashwat_Blood_Donation_Certificate" class="button button-primary" download>BLOOD DONATION CAMP CERTIFICATE</a>
+		   <p>
+
+		   
+		   <p class="lead">
+	   </div>   		
+   </div> <!-- /section-intro--> 
+   <p class="row section-intro"> </p>
+	
+   
+   
+	   </div> <!-- /col-twelve -->
+	   
+   </div> <!-- /resume-timeline -->
+
+
+
+   <!-- contact
+   ================================================== -->
+	<section id="contact">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Contact</h5>
+   			<h1>I'd Love To Hear From You.</h1>
+
+   			<p class="lead"></p>
+
+   		</div> 
+   	</div> <!-- /section-intro -->
+
+
+   	<div class="row contact-info">
+
+   		<div class="col-four tab-full">
+
+   			<div class="icon">
+   				<i class="icon-pin"></i>
+   			</div>
+
+			   <p>West Lafayette, IN, USA</p>
+
+   			
+
+   		</div>
+
+   		<div class="col-four tab-full collapse">
+
+   			<div class="icon">
+   				<i class="icon-mail"></i>
+   			</div>
+
+   			<h5>Email Me At</h5>
+
+   			<p>ma.shashwat@gmail.com<br>
+			   	smudugur@purdue.edu		     
+			   </p>
+
+   		</div>
+
+   		<div class="col-four tab-full">
+
+   			<div class="icon">
+   				<i class="icon-phone"></i>
+   			</div>
+			   
+
+   			
+   		</div>
+   		
+   	</div> <!-- /contact-info -->
+		
+	</section> <!-- /contact -->
+
+
+   <!-- footer
+   ================================================== -->
+
+   <footer>
+     	<div class="row">
+
+     		<div class="col-six tab-full pull-right social">
+
+     			<ul class="footer-social">        
+			   
+			   </ul> 
+	      		
+	      </div>
+
+      	<div class="col-six tab-full">
+	      	<div class="copyright">
+		        	<span>© Copyright Kards 2016.</span> 
+		        	<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>	         	
+		         </div>		                  
+	      	</div>
+
+	      	<div id="go-top">
+		         <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
+		      </div>
+
+      	</div> <!-- /row -->     	
+   </footer>  
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>

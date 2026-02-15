@@ -1,0 +1,146 @@
+[
+  {
+    "id": "modal1",
+    "title": "Autonomous Racing Simulation & Digital Twin Framework",
+    "tldr": "Developed a Unity–ROS2 digital twin for autonomous race cars with scalable cloud deployment, multi-agent AI, and closed-loop vehicle dynamics validation.",
+    "images": ["images/portfolio/autonomous_racing_sim.png"],
+    "category": "ros2 unity docker autonomous-vehicles machine-learning digital-twin",
+    "tags": ["Python", "ROS2", "CAD", "Docker", "Machine Learning", "Vehicle Dynamics"],
+    "github": "",
+    "contribution": "Architected a full-stack autonomous racing simulation framework integrating Unity physics, ROS2 middleware, Dockerized infrastructure, and AI-driven opponent modeling for scalable autonomous vehicle validation.",
+    "details": [
+      "Built a high-fidelity Unity simulator modeling realistic track layouts, tire-road interaction, and vehicle dynamics to evaluate path planning, localization, and control performance.",
+      "Containerized ROS2 environments using Docker to enable cloud-based large-scale simulation testing and reproducible deployments.",
+      "Developed opponent AI agents for multi-agent racing scenarios to test overtaking, collision avoidance, and competitive decision-making.",
+      "Implemented sensor emulation (LiDAR, IMU, odometry) and closed-loop control loops to bridge simulation-to-real autonomy validation."
+    ]
+  },
+  {
+    "id": "modal2",
+    "title": "Hybrid Motion Planning with RL-Based Adaptive Control",
+    "tldr": "Integrated RRT* global planning with DDPG reinforcement learning for dynamic, collision-free robotic navigation.",
+    "images": ["images/portfolio/hybrid_motion_planning.png"],
+    "category": "robotics path-planning reinforcement-learning python simulation",
+    "tags": ["Python", "ROS2", "CAD", "Reinforcement Learning", "Path Planning", "Control Systems"],
+    "github": "",
+    "contribution": "Designed a hybrid planning stack combining classical sampling-based optimization with deep reinforcement learning for adaptive local control.",
+    "details": [
+      "Implemented RRT* for optimal global trajectory generation and DDPG for reactive local obstacle avoidance in dynamic environments.",
+      "Deployed in PyBullet simulations with static and moving obstacles to validate smoothness, latency, and collision-free navigation.",
+      "Engineered reward shaping strategies prioritizing energy efficiency, trajectory smoothness, and safety constraints.",
+      "Validated feasibility against kinematic and dynamic constraints of differential drive platforms."
+    ]
+  },
+  {
+    "id": "modal3",
+    "title": "2D SLAM Pipeline for Differential Drive Robot (ROS2)",
+    "tldr": "Engineered a real-time SLAM pipeline fusing LiDAR and odometry for robust localization and occupancy grid mapping.",
+    "images": ["images/portfolio/ros2_slam.png"],
+    "category": "ros2 slam robotics sensors state-estimation",
+    "tags": ["Python", "ROS2", "CAD", "SLAM", "LiDAR", "State Estimation"],
+    "github": "",
+    "contribution": "Developed an end-to-end SLAM system integrating probabilistic mapping, sensor fusion, and kinematic modeling.",
+    "details": [
+      "Fused wheel encoder odometry with 2D LiDAR scan matching to generate consistent occupancy grid maps.",
+      "Simulated sensor noise and robot kinematics in Gazebo for realistic validation.",
+      "Tuned scan alignment and localization parameters to minimize drift and improve map convergence.",
+      "Visualized pose estimation and mapping consistency in RViz2 to evaluate robustness."
+    ]
+  },
+  {
+    "id": "modal4",
+    "title": "6-DOF Robotic Arm Simulation & Inverse Kinematics",
+    "tldr": "Modeled and controlled a 6-DOF manipulator in ROS2 with inverse kinematics and spline-based trajectory planning.",
+    "images": ["images/portfolio/robotic_arm_sim.png"],
+    "category": "ros2 robotics kinematics control simulation",
+    "tags": ["Python", "ROS2", "CAD", "Kinematics", "Trajectory Planning", "Gazebo"],
+    "github": "",
+    "contribution": "Built a full robotic arm digital twin implementing URDF/XACRO modeling, IK solvers, and trajectory planning.",
+    "details": [
+      "Modeled articulated joints and actuators using URDF/XACRO for industrial manipulator replication.",
+      "Implemented inverse kinematics solvers to convert task-space goals into joint-space commands.",
+      "Developed spline-based planners ensuring smooth and collision-free trajectories.",
+      "Validated execution in Gazebo and RViz2 to ensure kinematic accuracy and control fidelity."
+    ]
+  },
+  {
+    "id": "modal5",
+    "title": "Reinforcement Learning for Robotic Pick-and-Place System",
+    "tldr": "Designed a hardware-integrated robotic system using reinforcement learning for adaptive object manipulation.",
+    "images": ["images/portfolio/rl_robotic_system.png"],
+    "category": "robotics reinforcement-learning embedded-systems python",
+    "tags": ["Python", "ROS2", "CAD", "Reinforcement Learning", "Arduino", "Wireless Communication"],
+    "github": "",
+    "contribution": "Developed an RL-driven robotic manipulation system integrating mechanical design, embedded control, and wireless communication.",
+    "details": [
+      "Built a robotic pick-and-place platform adaptable to varying object sizes and weights.",
+      "Implemented reinforcement learning algorithms to optimize positioning and grasp trajectories.",
+      "Developed master-slave WiFi communication between computer and microcontroller for distributed control.",
+      "Analyzed and visualized training metrics to refine agent performance and decision-making robustness."
+    ]
+  },
+  {
+    "id": "modal6",
+    "title": "Emergent Language Learning in Reinforcement Learning Agents",
+    "tldr": "Explored multimodal inference and emergent language understanding in RL agents without direct supervision.",
+    "images": ["images/portfolio/emergent_language_rl.png"],
+    "category": "machine-learning reinforcement-learning multimodal-ai research",
+    "tags": ["Python", "ROS2", "CAD", "Reinforcement Learning", "AI Research", "Multimodal Learning"],
+    "github": "",
+    "contribution": "Designed a custom partially observable environment to investigate language skill emergence in RL systems.",
+    "details": [
+      "Built a navigation simulation incorporating indirect language cues encoded as images.",
+      "Trained agents to infer navigation goals using multimodal perception.",
+      "Evaluated generalization and emergent reasoning capabilities without explicit language supervision.",
+      "Demonstrated research-oriented expertise in AI, representation learning, and embodied intelligence."
+    ]
+  },
+  {
+    "id": "modal7",
+    "title": "FSAE Brake System Design & CAE Optimization",
+    "tldr": "Led lightweight brake subsystem development with topology optimization, FEA validation, and manufacturing integration.",
+    "images": ["images/portfolio/fsae_brake_system.png"],
+    "category": "mechanical-design cad cae automotive manufacturing",
+    "tags": ["Python", "ROS2", "CAD", "Ansys", "GD&T", "Manufacturing"],
+    "github": "",
+    "contribution": "Directed subsystem-level mechanical design from concept to manufacturing for a competition-grade braking system.",
+    "details": [
+      "Designed pedal box, brake pedal, and rotor assemblies using advanced CAD workflows.",
+      "Applied structural and thermal FEA in Ansys to validate strength and thermal performance.",
+      "Performed MATLAB-based parametric optimization for hydraulic ratios and braking efficiency.",
+      "Collaborated with CNC machining, laser cutting, and welding teams to ensure manufacturability."
+    ]
+  },
+  {
+    "id": "modal8",
+    "title": "Jet Engine Fuel Pilot Valve Design & Hydraulic Simulation",
+    "tldr": "Optimized a compact jet engine pilot valve using Siemens NX and Amesim for flow and pressure validation.",
+    "images": ["images/portfolio/pilot_valve.png"],
+    "category": "mechanical-design cad cae fluid-systems aerospace",
+    "tags": ["Python", "ROS2", "CAD", "Siemens NX", "Amesim", "GD&T"],
+    "github": "",
+    "contribution": "Executed multi-cycle design refinement integrating CAD modeling, GD&T drafting, and hydraulic simulation.",
+    "details": [
+      "Reduced valve size while improving mass flow rate through geometric optimization in Siemens NX.",
+      "Performed hydraulic circuit modeling and pressure-flow simulations in Amesim.",
+      "Applied GD&T for production-ready part drawings ensuring assembly precision.",
+      "Reduced reliance on physical prototyping through simulation-driven validation."
+    ]
+  },
+  {
+    "id": "modal9",
+    "title": "Advanced Opponent Modeling for Multi-Agent Autonomous Racing",
+    "tldr": "Developed AI-driven opponent behavior models to simulate competitive multi-agent autonomous racing environments.",
+    "images": ["images/portfolio/multi_agent_racing.png"],
+    "category": "autonomous-vehicles multi-agent-systems machine-learning simulation",
+    "tags": ["Python", "ROS2", "CAD", "Machine Learning", "Multi-Agent Systems", "Autonomous Vehicles"],
+    "github": "",
+    "contribution": "Engineered competitive AI agents to stress-test autonomy stacks under adversarial and cooperative driving scenarios.",
+    "details": [
+      "Designed behavior models capturing overtaking logic, collision avoidance, and racing line optimization.",
+      "Integrated opponent agents into closed-loop simulation for robustness evaluation of planning algorithms.",
+      "Analyzed decision-making stability under high-speed, adversarial multi-agent conditions.",
+      "Enabled scalable evaluation of autonomous racing strategies in complex competitive environments."
+    ]
+  }
+]

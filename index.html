@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amar Wali - Portfolio | Swiss Design</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9E0R3DSRN1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-9E0R3DSRN1');
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #ffffff;
+            --secondary: #a0a0a0;
+            --accent-red: #ff2d2d;
+            --accent-blue: #0066ff;
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
+            --bg-tertiary: #1a1a1a;
+            --border: #2a2a2a;
+            --grid-color: rgba(255, 255, 255, 0.03);
+        }
+
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+            background: var(--bg-primary);
+            color: var(--primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Grid Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            padding: 0;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 200px 1fr 200px;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 4px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: var(--accent-red);
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 4rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent-red);
+            transition: width 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-icons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1.5rem;
+        }
+
+        .nav-icons a {
+            color: var(--secondary);
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .nav-icons a:hover {
+            color: var(--accent-red);
+            transform: translateY(-2px);
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 8rem 4rem 4rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .profile-frame {
+            position: relative;
+            width: 280px;
+            height: 280px;
+            margin-bottom: 2rem;
+        }
+
+        .profile-frame::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--accent-red);
+        }
+
+        .profile-frame::after {
+            content: '001';
+            position: absolute;
+            top: -30px;
+            right: 0;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--accent-red);
+            letter-spacing: 2px;
+        }
+
+        .profile-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 10%;
+            filter: grayscale(100%);
+            transition: filter 0.4s;
+        }
+
+        .profile-frame:hover img {
+            filter: grayscale(0%);
+        }
+
+        .hero-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3.5rem;
+            letter-spacing: 8px;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+
+        .hero-title {
+            font-size: 0.75rem;
+            color: var(--secondary);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-university {
+            font-size: 0.7rem;
+            color: var(--accent-red);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .hero-social a {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .hero-social a:hover {
+            border-color: var(--accent-red);
+            color: var(--accent-red);
+        }
+
+        .hero-right {
+            padding-left: 4rem;
+            border-left: 1px solid var(--border);
+        }
+
+        .section-marker {
+            font-size: 0.65rem;
+            color: var(--accent-red);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-marker::before {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: var(--accent-red);
+        }
+
+        .hero-headline {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-bio {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            text-align: justify;
+        }
+
+        .resume-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 2rem;
+            background: transparent;
+            border: 1px solid var(--accent-red);
+            color: var(--accent-red);
+            text-decoration: none;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: all 0.2s;
+        }
+
+        .resume-btn:hover {
+            background: var(--accent-red);
+            color: var(--bg-primary);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .info-block h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 3px;
+            color: var(--accent-red);
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.75rem;
+            color: var(--secondary);
+            margin-bottom: 0.75rem;
+            transition: color 0.2s;
+        }
+
+        .info-item:hover {
+            color: var(--primary);
+        }
+
+        .info-item i {
+            width: 16px;
+            color: var(--accent-blue);
+            font-size: 0.7rem;
+        }
+
+        .education-item {
+            margin-bottom: 1rem;
+        }
+
+        .education-item .degree {
+            font-size: 0.75rem;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .education-item .institution {
+            font-size: 0.65rem;
+            color: var(--secondary);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 6rem 4rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .section-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            color: var(--accent-red);
+            line-height: 1;
+        }
+
+        .section-title {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .section-line {
+            height: 1px;
+            background: var(--border);
+        }
+
+        /* Skills Section */
+        #skills {
+            background: var(--bg-secondary);
+            margin: 0;
+            max-width: 100%;
+            padding: 6rem 4rem;
+        }
+
+        #skills .section-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--bg-primary);
+            padding: 2rem;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .skill-category::before {
+            content: attr(data-number);
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--accent-red);
+        }
+
+        .category-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 3px;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.8rem;
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--secondary);
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            transition: all 0.2s;
+        }
+
+        .skill-pill:hover {
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        .skill-pill i {
+            font-size: 0.8rem;
+        }
+
+        /* Projects Section */
+        #projects {
+            background: var(--bg-primary);
+            max-width: 100%;
+            margin: 0;
+        }
+
+        #projects .section-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .project-filters {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--secondary);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            border-color: var(--accent-red);
+            color: var(--accent-red);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: var(--accent-red);
+            transition: height 0.3s;
+        }
+
+        .project-card:hover::before {
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-red);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.3s;
+        }
+
+        .project-card:hover .project-image {
+            filter: grayscale(0%);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-content h3 {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.5px;
+        }
+
+        .project-content p {
+            font-size: 0.75rem;
+            color: var(--secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .tag {
+            font-size: 0.6rem;
+            color: var(--accent-blue);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .tag::before {
+            content: '#';
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--accent-blue);
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-size: 0.65rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.2s;
+        }
+
+        .project-link:hover {
+            background: var(--accent-blue);
+            color: var(--bg-primary);
+        }
+
+        /* Contact Section */
+        #contact {
+            background: var(--bg-tertiary);
+            max-width: 100%;
+            margin: 0;
+        }
+
+        #contact .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-form-section {
+            background: var(--bg-primary);
+            padding: 3rem;
+            border: 1px solid var(--border);
+        }
+
+        .contact-form-section h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 4px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            color: var(--primary);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.8rem;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-red);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--accent-red);
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background: #ff4444;
+        }
+
+        .contact-email {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--secondary);
+        }
+
+        .contact-email a {
+            color: var(--accent-red);
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-primary);
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            font-size: 0.7rem;
+            color: var(--secondary);
+            letter-spacing: 2px;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            background: var(--bg-secondary);
+            margin: 3% auto;
+            padding: 3rem;
+            max-width: 1100px;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .modal-header h2 {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .modal-header .tldr {
+            color: var(--accent-red);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .modal-main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .image-carousel {
+            position: relative;
+            background: var(--bg-primary);
+        }
+
+        .carousel-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: none;
+        }
+
+        .carousel-image.active {
+            display: block;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--border);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .carousel-dot.active {
+            background: var(--accent-red);
+            width: 24px;
+        }
+
+        .modal-summary {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .modal-section {
+            background: var(--bg-primary);
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .modal-section h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            color: var(--accent-red);
+            margin-bottom: 1rem;
+        }
+
+        .modal-section p,
+        .modal-section ul {
+            font-size: 0.8rem;
+            color: var(--secondary);
+            line-height: 1.7;
+        }
+
+        .modal-section ul {
+            list-style: none;
+        }
+
+        .modal-section li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .modal-section li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--accent-red);
+        }
+
+        .modal-details h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .modal-details p {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--secondary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .close-modal:hover {
+            border-color: var(--accent-red);
+            color: var(--accent-red);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 6rem 2rem 4rem;
+            }
+
+            .hero-right {
+                padding-left: 0;
+                border-left: none;
+                padding-top: 2rem;
+                border-top: 1px solid var(--border);
+            }
+
+            .skills-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .modal-main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--bg-primary);
+                flex-direction: column;
+                padding: 1rem;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .nav-container {
+                grid-template-columns: 1fr auto auto;
+                gap: 1rem;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .hero-name {
+                font-size: 2.5rem;
+            }
+
+            .hero-headline {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">AMAR WALI</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="https://github.com/waliamar" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/amar-wali/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="mobile-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-left">
+            <div class="profile-frame">
+                <img src="images/me.png" alt="Amar Wali">
+            </div>
+            <h1 class="hero-name">AMAR WALI</h1>
+            <p class="hero-title">Robotics Engineer</p>
+            <p class="hero-university">Purdue University</p>
+            <div class="hero-social">
+                <a href="mailto:amarwali1234@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/waliamar" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/amar-wali/" target="_blank" title="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="section-marker">About</div>
+            <h2 class="hero-headline">Greetings Traveller!</h2>
+            <p class="hero-bio">
+                Mission Log: System Initialized.<br>
+
+                I’m a robotics grad student building driverless racecars, robotic arms, and reinforcement learning
+                agents that learn by doing—often badly at first. I enjoy taking complex autonomous systems from chaos to
+                capability, whether that’s racing at the limit or teaching a humanoid how to walk!
+
+                <br>Think less 'black-box AI', more Iron Man in the garage: build, test, break, understand, and ship
+                something
+                better.
+
+                <br>Outside mission time, I’m into anime, swimming, parkour, and game design side quests (still
+                levelling up).
+
+                <br>Status: Builder-minded. Curious. Ready for the next challenge.
+            </p>
+
+            <a href="assets/Shashwat_Resume.pdf" class="resume-btn" download>
+                <i class="fas fa-download"></i> Download Resume
+            </a>
+
+            <div class="info-grid">
+                <div class="info-block">
+                    <h3>CORE SKILLS</h3>
+                    <div class="info-item"><i class="fas fa-code"></i><span>C / C++</span></div>
+                    <div class="info-item"><i class="fab fa-python"></i><span>Python</span></div>
+                    <div class="info-item"><i class="fas fa-robot"></i><span>ROS2</span></div>
+                    <div class="info-item"><i class="fas fa-microchip"></i><span>Embedded Firmware & RTOS</span></div>
+                    <div class="info-item"><i class="fab fa-docker"></i><span>Docker</span></div>
+                    <div class="info-item"><i class="fab fa-linux"></i><span>Linux</span></div>
+                </div>
+                <div class="info-block">
+                    <h3>EDUCATION</h3>
+                    <div class="education-item">
+                        <div class="degree">MSc in Robotics</div>
+                        <div class="institution">Purdue University, 2024-Present</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="degree">B.E in Mechanical Engineering</div>
+                        <div class="institution">Ramaiah Institute of Technology</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Technical Arsenal</h2>
+                <span class="section-line"></span>
+            </div>
+
+            <div class="skills-container">
+                <div class="skill-category" data-number="01">
+                    <h3 class="category-title">PROGRAMMING LANGUAGES</h3>
+                    <div class="skills-grid">
+                        <div class="skill-pill"><i class="fab fa-python"></i><span>Python</span></div>
+                        <div class="skill-pill"><i class="fas fa-c"></i><span>C</span></div>
+                        <div class="skill-pill"><i class="fas fa-copyright"></i><span>C++</span></div>
+                        <div class="skill-pill"><i class="fab fa-java"></i><span>Java</span></div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-number="02">
+                    <h3 class="category-title">ROBOTICS & AUTONOMOUS</h3>
+                    <div class="skills-grid">
+                        <div class="skill-pill"><span>ROS2</span></div>
+                        <div class="skill-pill"><span>Gazebo</span></div>
+                        <div class="skill-pill"><span>RVIZ</span></div>
+                        <div class="skill-pill"><span>NAV2</span></div>
+                        <div class="skill-pill"><span>SLAM</span></div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-number="03">
+                    <h3 class="category-title">EMBEDDED SYSTEMS</h3>
+                    <div class="skills-grid">
+                        <div class="skill-pill"><span>STM32</span></div>
+                        <div class="skill-pill"><span>ESP32</span></div>
+                        <div class="skill-pill"><span>Raspberry Pi</span></div>
+                        <div class="skill-pill"><span>FreeRTOS</span></div>
+                        <div class="skill-pill"><span>CAN Bus</span></div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-number="04">
+                    <h3 class="category-title">COMPUTER VISION & AI</h3>
+                    <div class="skills-grid">
+                        <div class="skill-pill"><span>PyTorch</span></div>
+                        <div class="skill-pill"><span>OpenCV</span></div>
+                        <div class="skill-pill"><span>MediaPipe</span></div>
+                        <div class="skill-pill"><span>Kalman Filter</span></div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-number="05">
+                    <h3 class="category-title">DEVELOPMENT TOOLS</h3>
+                    <div class="skills-grid">
+                        <div class="skill-pill"><i class="fab fa-docker"></i><span>Docker</span></div>
+                        <div class="skill-pill"><i class="fab fa-linux"></i><span>Linux</span></div>
+                        <div class="skill-pill"><i class="fab fa-git-alt"></i><span>Git</span></div>
+                        <div class="skill-pill"><span>Bash</span></div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-number="06">
+                    <h3 class="category-title">CAD & DESIGN</h3>
+                    <div class="skills-grid">
+                        <div class="skill-pill"><span>SolidWorks</span></div>
+                        <div class="skill-pill"><span>3D Printing</span></div>
+                        <div class="skill-pill"><span>AutoCAD</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-content">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <span class="section-line"></span>
+            </div>
+
+            <div class="project-filters">
+                <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+                <button class="filter-btn" onclick="filterProjects('ros2')">ROS2</button>
+                <button class="filter-btn" onclick="filterProjects('python')">Python</button>
+                <button class="filter-btn" onclick="filterProjects('robotics')">Robotics</button>
+                <button class="filter-btn" onclick="filterProjects('machine-learning')">Machine Learning</button>
+                <button class="filter-btn" onclick="filterProjects('simulation')">Simulation</button>
+                <button class="filter-btn" onclick="filterProjects('mechanical-design')">Mechanical Design</button>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid"></div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-content">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <span class="section-line"></span>
+            </div>
+
+            <div class="contact-form-section">
+                <h3>SEND A MESSAGE</h3>
+                <form action="https://formspree.io/f/mjkpkopz" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+                <div class="contact-email">
+                    <p>Or email me directly at: <a href="mailto:amarwali1234@gmail.com">amarwali1234@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 AMAR WALI — THANK YOU FOR VISITING</p>
+    </footer>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        const projectsData = [
+            {
+                "id": "modal1",
+                "title": "Autonomous Racing Simulation & Digital Twin Framework",
+                "tldr": "Developed a Unity–ROS2 digital twin for autonomous race cars with scalable cloud deployment, multi-agent AI, and closed-loop vehicle dynamics validation.",
+                "images": ["images/pair/pair_1.gif", "images/pair/pair_2.gif", "images/pair/pair-web.jpg"],
+                "category": "ros2 unity docker autonomous-vehicles machine-learning digital-twin",
+                "tags": ["Python", "ROS2", "CAD", "Docker", "Machine Learning", "Vehicle Dynamics"],
+                "github": "",
+                "contribution": "Architected a full-stack autonomous racing simulation framework integrating Unity physics, ROS2 middleware, Dockerized infrastructure, and AI-driven opponent modeling for scalable autonomous vehicle validation.",
+                "details": ["Built a high-fidelity Unity simulator modeling realistic track layouts, tire-road interaction, and vehicle dynamics to evaluate path planning, localization, and control performance.", "Containerized ROS2 environments using Docker to enable cloud-based large-scale simulation testing and reproducible deployments.", "Developed opponent AI agents for multi-agent racing scenarios to test overtaking, collision avoidance, and competitive decision-making.", "Implemented sensor emulation (LiDAR, IMU, odometry) and closed-loop control loops to bridge simulation-to-real autonomy validation."]
+            },
+            {
+                "id": "modal2",
+                "title": "Hybrid Motion Planning with RL-Based Adaptive Control",
+                "tldr": "Integrated RRT* global planning with DDPG reinforcement learning for dynamic, collision-free robotic navigation.",
+                "images": ["images/rrt/rrt.gif"],
+                "category": "robotics path-planning reinforcement-learning python simulation",
+                "tags": ["Python", "ROS2", "CAD", "Reinforcement Learning", "Path Planning", "Control Systems"],
+                "github": "https://github.com/waliamar/Hybrid-RRT-DDPG-Planner",
+                "contribution": "Designed a hybrid planning stack combining classical sampling-based optimization with deep reinforcement learning for adaptive local control.",
+                "details": ["Implemented RRT* for optimal global trajectory generation and DDPG for reactive local obstacle avoidance in dynamic environments.", "Deployed in PyBullet simulations with static and moving obstacles to validate smoothness, latency, and collision-free navigation.", "Engineered reward shaping strategies prioritizing energy efficiency, trajectory smoothness, and safety constraints.", "Validated feasibility against kinematic and dynamic constraints of differential drive platforms."]
+            },
+            {
+                "id": "modal3",
+                "title": "2D SLAM Pipeline for Differential Drive Robot (ROS2)",
+                "tldr": "Engineered a real-time SLAM pipeline fusing LiDAR and odometry for robust localization and occupancy grid mapping.",
+                "images": ["images/slam/slam_1.gif", "images/slam/slam_2.gif"],
+                "category": "ros2 slam robotics sensors state-estimation",
+                "tags": ["Python", "ROS2", "CAD", "SLAM", "LiDAR", "State Estimation"],
+                "github": "https://github.com/waliamar/ros2-slam-pipeline",
+                "contribution": "Developed an end-to-end SLAM system integrating probabilistic mapping, sensor fusion, and kinematic modeling.",
+                "details": ["Fused wheel encoder odometry with 2D LiDAR scan matching to generate consistent occupancy grid maps.", "Simulated sensor noise and robot kinematics in Gazebo for realistic validation.", "Tuned scan alignment and localization parameters to minimize drift and improve map convergence.", "Visualized pose estimation and mapping consistency in RViz2 to evaluate robustness."]
+            },
+            {
+                "id": "modal4",
+                "title": "6-DOF Robotic Arm Simulation & Inverse Kinematics",
+                "tldr": "Modeled and controlled a 6-DOF manipulator in ROS2 with inverse kinematics and spline-based trajectory planning.",
+                "images": ["images/ur3/ur3_1.png", "images/ur3/ur3_2.png", "images/ur3/ur3_3.png"],
+                "category": "ros2 robotics kinematics control simulation",
+                "tags": ["Python", "ROS2", "CAD", "Kinematics", "Trajectory Planning", "Gazebo"],
+                "github": "",
+                "contribution": "Built a full robotic arm digital twin implementing URDF/XACRO modeling, IK solvers, and trajectory planning.",
+                "details": ["Modeled articulated joints and actuators using URDF/XACRO for industrial manipulator replication.", "Implemented inverse kinematics solvers to convert task-space goals into joint-space commands.", "Developed spline-based planners ensuring smooth and collision-free trajectories.", "Validated execution in Gazebo and RViz2 to ensure kinematic accuracy and control fidelity."]
+            },
+            {
+                "id": "modal5",
+                "title": "Reinforcement Learning for Robotic Pick-and-Place System",
+                "tldr": "Designed a hardware-integrated robotic system using reinforcement learning for adaptive object manipulation.",
+                "images": ["images/miniproj/miniproj_1.gif", "images/miniproj/miniproj_2.jpg", "images/miniproj/miniproj_3.jpg", "images/miniproj/miniproj_4.jpg"],
+                "category": "robotics reinforcement-learning python",
+                "tags": ["Python", "ROS2", "CAD", "Reinforcement Learning", "Arduino", "Wireless Communication"],
+                "github": "",
+                "contribution": "Developed an RL-driven robotic manipulation system integrating mechanical design, embedded control, and wireless communication.",
+                "details": ["Built a robotic pick-and-place platform adaptable to varying object sizes and weights.", "Implemented reinforcement learning algorithms to optimize positioning and grasp trajectories.", "Developed master-slave WiFi communication between computer and microcontroller for distributed control.", "Analyzed and visualized training metrics to refine agent performance and decision-making robustness."]
+            },
+            {
+                "id": "modal6",
+                "title": "Emergent Language Learning in Reinforcement Learning Agents",
+                "tldr": "Explored multimodal inference and emergent language understanding in RL agents without direct supervision.",
+                "images": ["images/rl/rl_1.gif"],
+                "category": "machine-learning reinforcement-learning multimodal-ai research",
+                "tags": ["Python", "ROS2", "CAD", "Reinforcement Learning", "AI Research", "Multimodal Learning"],
+                "github": "",
+                "contribution": "Designed a custom partially observable environment to investigate language skill emergence in RL systems.",
+                "details": ["Built a navigation simulation incorporating indirect language cues encoded as images.", "Trained agents to infer navigation goals using multimodal perception.", "Evaluated generalization and emergent reasoning capabilities without explicit language supervision.", "Demonstrated research-oriented expertise in AI, representation learning, and embodied intelligence."]
+            },
+            {
+                "id": "modal7",
+                "title": "FSAE Brake System Design & CAE Optimization",
+                "tldr": "Led lightweight brake subsystem development with topology optimization, FEA validation, and manufacturing integration.",
+                "images": ["images/velocita/velocita_1.jpg", "images/velocita/velocita_2.jpg", "images/velocita/velocita_5.jpg", "images/velocita/velocita_6.jpg", "images/velocita/velocita_7.jpg", "images/velocita/velocita_8.jpg", "images/velocita/velocita_9.jpg", "images/velocita/velocita_10.jpg", "images/velocita/velocita_11.jpg", "images/velocita/velocita_12.jpg", "images/velocita/velocita_13.jpg", "images/velocita/velocita_14.jpg", "images/velocita/velocita_15.jpg", "images/velocita/velocita_16.jpg", "images/velocita/velocita_17.jpg"],
+                "category": "mechanical-design cad cae automotive manufacturing",
+                "tags": ["Python", "ROS2", "CAD", "Ansys", "GD&T", "Manufacturing"],
+                "github": "https://velocitaracing.github.io/",
+                "contribution": "Directed subsystem-level mechanical design from concept to manufacturing for a competition-grade braking system.",
+                "details": ["Designed pedal box, brake pedal, and rotor assemblies using advanced CAD workflows.", "Applied structural and thermal FEA in Ansys to validate strength and thermal performance.", "Performed MATLAB-based parametric optimization for hydraulic ratios and braking efficiency.", "Collaborated with CNC machining, laser cutting, and welding teams to ensure manufacturability."]
+            },
+            {
+                "id": "modal8",
+                "title": "Jet Engine Fuel Pilot Valve Design & Hydraulic Simulation",
+                "tldr": "Optimized a compact jet engine pilot valve using Siemens NX and Amesim for flow and pressure validation.",
+                "images": ["images/drdo/drdo_1.png", "images/drdo/drdo_2.png", "images/drdo/drdo_3.gif"],
+                "category": "mechanical-design cad cae fluid-systems aerospace",
+                "tags": ["Python", "ROS2", "CAD", "Siemens NX", "Amesim", "GD&T"],
+                "github": "",
+                "contribution": "Executed multi-cycle design refinement integrating CAD modeling, GD&T drafting, and hydraulic simulation.",
+                "details": ["Reduced valve size while improving mass flow rate through geometric optimization in Siemens NX.", "Performed hydraulic circuit modeling and pressure-flow simulations in Amesim.", "Applied GD&T for production-ready part drawings ensuring assembly precision.", "Reduced reliance on physical prototyping through simulation-driven validation."]
+            }
+        ];
+
+        function renderProjects(projects) {
+            const grid = document.getElementById('projectsGrid');
+            grid.innerHTML = '';
+            projects.forEach(project => {
+                const card = document.createElement('div');
+                card.className = 'project-card';
+                card.setAttribute('data-category', project.category);
+                card.onclick = () => openModal(project.id);
+                card.innerHTML = `
+                    <img src="${project.images[0]}" alt="${project.title}" class="project-image">
+                    <div class="project-content">
+                        <h3>${project.title}</h3>
+                        <p>${project.tldr}</p>
+                        <div class="project-tags">
+                            ${project.tags.slice(0, 4).map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        </div>
+                        ${project.github ? `<a href="${project.github}" class="project-link" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i> GitHub</a>` : ''}
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function openModal(projectId) {
+            const project = projectsData.find(p => p.id === projectId);
+            if (!project) return;
+            let carouselHTML = project.images.length > 1 ? `
+                <div class="image-carousel">
+                    ${project.images.map((img, idx) => `<img src="${img}" class="carousel-image ${idx === 0 ? 'active' : ''}" alt="${project.title}">`).join('')}
+                    <div class="carousel-controls">
+                        ${project.images.map((_, idx) => `<div class="carousel-dot ${idx === 0 ? 'active' : ''}" onclick="changeCarouselImage(${idx})"></div>`).join('')}
+                    </div>
+                </div>
+            ` : `<img src="${project.images[0]}" style="width: 100%; height: 350px; object-fit: cover;" alt="${project.title}">`;
+
+            document.getElementById('modalBody').innerHTML = `
+                <div class="modal-header">
+                    <h2>${project.title}</h2>
+                    <p class="tldr">${project.tldr}</p>
+                </div>
+                <div class="modal-main-content">
+                    ${carouselHTML}
+                    <div class="modal-summary">
+                        <div class="modal-section">
+                            <h4>TECHNOLOGIES</h4>
+                            <div class="project-tags">${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
+                        </div>
+                        ${project.github ? `<div class="modal-section"><a href="${project.github}" class="btn btn-primary" target="_blank" style="width: 100%; text-align: center;"><i class="fab fa-github"></i> View on GitHub</a></div>` : ''}
+                        <div class="modal-section">
+                            <h4>MY CONTRIBUTION</h4>
+                            <p>${project.contribution}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-details">
+                    <h4>PROJECT DETAILS</h4>
+                    ${project.details.map(detail => `<p>${detail}</p>`).join('')}
+                </div>
+            `;
+            document.getElementById('projectModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function changeCarouselImage(index) {
+            document.querySelectorAll('.carousel-image').forEach((img, i) => img.classList.toggle('active', i === index));
+            document.querySelectorAll('.carousel-dot').forEach((dot, i) => dot.classList.toggle('active', i === index));
+        }
+
+        function closeModal() {
+            document.getElementById('projectModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        function filterProjects(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            document.querySelectorAll('.project-card').forEach(card => {
+                const cats = card.getAttribute('data-category');
+                card.style.display = (category === 'all' || cats.includes(category)) ? 'block' : 'none';
+            });
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        window.onclick = function (event) {
+            if (event.target == document.getElementById('projectModal')) closeModal();
+        }
+
+        window.addEventListener('DOMContentLoaded', () => renderProjects(projectsData));
+    </script>
+</body>
+
+</html>
