@@ -1,0 +1,58 @@
+- Programming Languages
+  - Python 5
+  - C++ 3
+  - C 3
+  - SQL 4
+  - R 2
+  - Shell Scripting 5
+- AI & Machine Learning
+  - RAG 4
+  - Agentic AI 4
+  - Reinforcement Learning 5
+  - LLMs 3
+  - Neural Networks 5
+  - Claude Code 5
+- Simulation
+  - RViz 5
+  - Unity 4
+  - Gazebo 4
+  - Isaac sim 4
+  - PyBullet 5
+  - Godot 3
+- Robotics and Autonomy
+  - ROS2 5
+  - Nav2 3
+  - SLAM 4
+  - Path planning (A*, RRT) 2
+  - Kalman Filtering (Camera, LiDAR, IMU) 4
+  - Image Processing (OpenCV) 4
+- Control Systems
+  - PID 4
+  - State-space control 4
+  - MPC 3
+  - System modelling 5
+  - MATLAB 4
+- Mathematics
+  - Kinematics 5
+  - Inverse Kinematics 4
+  - Linear Algebra 5
+  - Markov Chain & Probability 4
+  - Linear Regression 3
+- Mechanical
+  - Dynamics 5
+  - CAD Design (Solidworks, Catia, Seimens NX) 5
+  - CAE (Ansys) 5
+  - CFD 3
+  - Manufacturing 5
+  - GD&T 4
+- Development tools
+  - Docker 4
+  - Git 5
+  - CI/CD 4
+  - Linux 5
+  - Foxglove 3
+- Hardware
+  - Arduino 5 
+  - Raspberry Pi 5
+  - ESP 32 3
+  - CAN Bus 4
